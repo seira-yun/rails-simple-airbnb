@@ -1,0 +1,19 @@
+<div class="card-trip">
+  <%= image_tag "http://source.unsplash.com/featured/?#{flat.name}&#{rand(1000)}"%>
+  <div class="p-3">
+    <div>
+      <h2><%= flat.name %></h2>
+      <p><%= flat.address %></p>
+    </div>
+    <div class="d-flex">
+      <i class="fas fa-user-friends"></i>
+      <p class='mx-2'><%= flat.number_of_guests %></p>
+      <i class="fas fa-euro-sign"></i>
+      <p class='mx-2'><%= flat.price_per_night %></p>
+    </div>
+  </div>
+  <div>
+    <%= link_to 'More info', flat_path(flat) %>
+  </div>
+  <%= link_to '', flat_path(flat), class: 'card-link' %>
+</div>
